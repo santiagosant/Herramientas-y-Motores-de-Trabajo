@@ -18,9 +18,10 @@ public class enemy_ia : MonoBehaviour
 
         if (is_in_range == true)
         {
-            Vector3 see_and_go = new Vector3(player.position.x, transform.position.y, player.position.z);
-            transform.LookAt(see_and_go);
-            transform.position = Vector3.MoveTowards(transform.position, see_and_go, speed * Time.deltaTime);
+            Vector3 see = new Vector3(player.position.x, transform.position.y, player.position.z);
+            Vector3 go = new Vector3(player.position.x, player.position.y, player.position.z);
+            transform.LookAt(see);
+            transform.position = Vector3.MoveTowards(transform.position, go, speed * Time.deltaTime);
         }
 
     }

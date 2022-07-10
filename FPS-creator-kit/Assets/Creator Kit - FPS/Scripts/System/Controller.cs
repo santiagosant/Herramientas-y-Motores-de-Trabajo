@@ -106,6 +106,8 @@ public class Controller : MonoBehaviour
         if (CanPause && Input.GetButtonDown("Menu"))
         {
             PauseMenu.Instance.Display();
+            Time.timeScale = 0f;
+           
         }
         
         FullscreenMap.Instance.gameObject.SetActive(Input.GetButton("Map"));

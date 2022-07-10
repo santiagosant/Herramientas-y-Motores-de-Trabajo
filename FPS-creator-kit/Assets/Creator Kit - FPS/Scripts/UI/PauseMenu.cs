@@ -38,6 +38,7 @@ public class PauseMenu : MonoBehaviour
         GameSystem.Instance.StartTimer();
         gameObject.SetActive(false);
         Controller.Instance.DisplayCursor(false);
+        Time.timeScale = 1f;
     }
 
     public void ExitGame()
