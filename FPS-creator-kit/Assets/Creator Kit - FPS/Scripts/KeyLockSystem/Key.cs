@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Key : MonoBehaviour
 {
+
+    public GameObject wave;
     public string keyType;
-    public Text KeyNameText;
+    public Text KeyNameText;   
 
     void OnEnable()
     {
@@ -20,6 +22,7 @@ public class Key : MonoBehaviour
         if (keychain != null)
         {
             keychain.GrabbedKey(keyType);
+            wave.SetActive(true);
             Destroy(gameObject);
         }
     }
