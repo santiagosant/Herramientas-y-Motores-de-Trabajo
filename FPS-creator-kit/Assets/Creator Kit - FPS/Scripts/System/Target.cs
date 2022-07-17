@@ -19,6 +19,7 @@ public class Target : MonoBehaviour
 
     bool m_Destroyed = false;
     float m_CurrentHealth;
+    public GameObject key;
 
     void Awake()
     {
@@ -65,6 +66,12 @@ public class Target : MonoBehaviour
         }
 
         m_Destroyed = true;
+        
+        // En caso que el enemigo muera y tenga asociada una la activo
+        if (key == true)
+        {
+            key.SetActive(true);
+        }
         
         gameObject.SetActive(false);
        
